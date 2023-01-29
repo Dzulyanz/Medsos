@@ -10,6 +10,13 @@
   opacity: 80%;
   
 }
+.blur{
+  background: rgba(255, 255, 255, 0.452);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 40px;
+  
+}
 section{
   position: absolute; 
   width: 100%; height: 100vh;
