@@ -1,0 +1,97 @@
+*{margin: 0; padding: 0; 
+  box-sizing: border-box;
+}
+.text{
+  text-align: center;
+  position: relative;
+  color: white;
+  font-family: sans-serif;
+  transform: translateY(180px);
+  opacity: 80%;
+  
+}
+section{
+  position: absolute; 
+  width: 100%; height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: Linear-gradient(to bottom, #ff4f8b, #dff1ff);
+}
+section::before{
+  content:'';
+  position: absolute;
+  width: 100%;height: 50%;
+  bottom: 0;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+section .color{
+  position: fixed; 
+  Filter: blur(120px);
+}
+section .color:nth-child(1) { 
+  background: #FF66B2;
+  width: 900px; height: 400px; 
+  top: -250px;
+}
+section .color:nth-child(2){
+  background: #00d2ff;
+  width: 500px; height: 500px;
+  bottom: -150px; 
+  Left: 100px;
+}
+section .color:nth-child(3){
+  background: #fffd87;
+  width: 300px; height: 300px;
+  bottom: -150px;
+  right: 0;
+}
+ul{
+  position: absolute;
+  display: flex;
+  z-index: 2;
+}
+ul li{
+  position: relative;
+  list-style: none;
+  margin: 15px;
+}
+ul li a{
+  position: relative;
+  width: 50px;
+  height: 80px;
+  display: inline-block; 
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 4px solid rgba(255, 255, 255, 0.2); 
+  border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 2em;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  backdrop-filter: blur(2px);
+  transition: 0.2s; 
+  overflow: hidden;
+} 
+ul li a:hover{
+  transform: translateY(-20px);
+}
+ul li a::before{
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 50px;
+  height: 100%; 
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+}
+ul li a:hover::before{
+  transform: skewX(45deg) translateX(-150px);
+}
